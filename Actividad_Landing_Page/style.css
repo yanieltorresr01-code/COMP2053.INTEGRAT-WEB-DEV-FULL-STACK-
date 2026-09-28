@@ -1,0 +1,224 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    display: grid;
+
+    grid-template-areas:
+        "header"
+        "acerca"
+        "ayudar"
+        "testimonios"
+        "imagenes"
+        "suscripcion"
+        "footer";
+}
+
+/* Header */
+
+header {
+    grid-area: header;
+
+    background-color: #4e54c8;
+    color: white;
+
+    text-align: center;
+    padding: 50px 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+/* Acerca de nosotros */
+
+#acerca-de {
+    grid-area: acerca;
+
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#acerca-de h2 {
+    color: #4e54c8;
+}
+
+#acerca-de p {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+/* Como ayudar */
+
+#como-ayudar {
+    grid-area: ayudar;
+
+    background-color: #f0f4ff;
+
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#como-ayudar h2 {
+    color: #ff6347;
+}
+
+#como-ayudar p {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+/* Testimonios */
+
+#testimonios {
+    grid-area: testimonios;
+
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#testimonios h2 {
+    color: #4e54c8;
+}
+
+.testimonios {
+    display: flex;
+    gap: 20px;
+}
+
+.testimonio {
+    flex: 1;
+
+    background-color: #f0f4ff;
+
+    padding: 20px;
+}
+
+/* Imagenes */
+
+#imagenes {
+    grid-area: imagenes;
+
+    background-color: #f0f4ff;
+
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.imagenes {
+    display: flex;
+    gap: 20px;
+}
+
+.imagenes img {
+    width: 30%;
+}
+
+/* Suscripcion */
+
+#suscripcion {
+    grid-area: suscripcion;
+
+    padding: 50px 20px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+input {
+    padding: 10px;
+}
+
+button {
+    padding: 10px 20px;
+
+    background-color: #4e54c8;
+    color: white;
+
+    border: none;
+}
+
+/* Boton para telefono */
+
+.boton {
+    display: none;
+
+    background-color: #4e54c8;
+    color: white;
+
+    padding: 10px 20px;
+
+    text-decoration: none;
+}
+
+/* Footer */
+
+footer {
+    grid-area: footer;
+
+    background-color: #343a40;
+    color: white;
+
+    text-align: center;
+    padding: 25px;
+}
+
+/* Pantallas pequeñas */
+
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .testimonios {
+        flex-direction: column;
+    }
+
+    .imagenes {
+        flex-direction: column;
+    }
+
+    .imagenes img {
+        width: 100%;
+    }
+
+    #suscripcion form {
+        display: none;
+    }
+
+    .boton {
+        display: inline-block;
+    }
+}
+
+.pagina {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.pagina h1 {
+    color: #4e54c8;
+}
+
+.pagina .boton {
+    display: inline-block;
+}
